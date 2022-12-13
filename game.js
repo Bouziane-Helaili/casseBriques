@@ -262,7 +262,7 @@ sound.addEventListener("click", audioManager);
 
 function audioManager() {
     let imgSrc = sound.getAttribute("src");
-    let SOUND_IMG = imgSrc === "image/sound.png" ? "image/muted.png" : "image/sound.png";
+    let SOUND_IMG = imgSrc === "image/sound_on.png" ? "image/muted.png" : "image/sound_on.png";
     this.src = SOUND_IMG;
     WALL_HIT.muted = !WALL_HIT.muted;
     PADDLE_HIT.muted = !PADDLE_HIT.muted;
