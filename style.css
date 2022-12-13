@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: gruppo, sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("image/web.jpg") no-repeat fixed;   
+}
+
+h1{
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+}
+span{
+    font-size: 1rem;
+}
+
+.game {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: #000000;
+    border: none;
+    padding: 10px 20 px;
+    color: #ffffff;
+    border-radius: 5px;
+    /* font-family: gruppo, sans-serif; */
+    transition: background-color .1s ease-in;
+}
+
+.rules {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    background-color: #6198d8;
+    color: #fff;
+    width: 400px;
+    padding: 20px;
+    line-height: 1.5;
+    border-radius: 4px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s ease-in, visibility .3s ease-in;
+}
+
+.rules.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.rules p {
+    margin-bottom: .5rem;
+    margin-top: 0;
+}
+
+.btn:hover {
+    border: #376599;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:active {
+    transform: scale(.98);
+}
+
+.rules-btn {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+}
+
+.sound-container {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+}
+
+.sound-container #sound {
+    width: 40px;
+    height: auto;
+    transition: .1s ease-in-out;
+}
+
+#sound:hover {
+    box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+}
+
+#game-over {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    width: 250px;
+    height: 300px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#you-won,
+#you-lose {
+    width: 160px;
+}
+
+#restart {
+    color: #fff;
+    cursor: pointer;
+    padding: 4px 8px;
+    line-height: 1.5;
+    border: 1px solid #6198d8;
+    border-radius: 4px;
+    text-align: center;
+    transition: .1s ease-in-out;
+}
+
+#restart:hover {
+    background-color: #6898d8;
+}
+
+#canvas {
+    background-color: #111;
+    display: block;
+    border-radius: 4px;
+}
